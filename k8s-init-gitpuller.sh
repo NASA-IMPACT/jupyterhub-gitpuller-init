@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # Check if target path is defined
 if [ -z "$TARGET_PATH" ]; then
     echo "TARGET_PATH is not defined as an environment variable."
@@ -23,3 +25,5 @@ gitpuller $SOURCE_REPO $SOURCE_BRANCH /home/$NB_USER/$TARGET_PATH
 # Change ownership of target path
 chown -R $NB_USER:$NB_USER /home/$NB_USER/$TARGET_PATH
 
+# Always exit with status 0 to avoid blocking the pod from starting
+exit 0
