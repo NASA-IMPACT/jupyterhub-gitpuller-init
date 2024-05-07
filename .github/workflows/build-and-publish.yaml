@@ -33,7 +33,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ghcr.io/sunu/jupyterhub-gitpuller-init:latest
-          ghcr.io/sunu/jupyterhub-gitpuller-init:${{ github.sha }}
+          ghcr.io/NASA-IMPACT/jupyterhub-gitpuller-init:latest
+          ghcr.io/NASA-IMPACT/jupyterhub-gitpuller-init:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max

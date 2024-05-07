@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 ENV VERSION=0.0.1
 
-LABEL org.opencontainers.image.source=https://github.com/sunu/jupyterhub-gitpuller-init
+LABEL org.opencontainers.image.source=https://github.com/NASA-IMPACT/jupyterhub-gitpuller-init
 
 ENV DEBIAN_FRONTEND=non-interactive
 RUN echo "installing apt-get packages..." \
