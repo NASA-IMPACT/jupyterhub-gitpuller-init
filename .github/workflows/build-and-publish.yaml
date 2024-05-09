@@ -33,6 +33,11 @@ jobs:
         registry: public.ecr.aws
         username: ${{ secrets.AWS_ACCESS_KEY_ID }}
         password: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    
+    - uses: int128/create-ecr-repository-action@v1
+      with:
+        repository: jupyterhub-gitpuller-init
+        public: true
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
